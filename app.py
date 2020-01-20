@@ -24,7 +24,6 @@ app.secret_key = 'key'
 # metadata = Base.metadata
 # session = Session()
 
-app.debug = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://hwqhswobmmdfmk:3491294f770bccd7f0eddc73a6d5f702f0183662cd3930482d62a8096c9eb701@ec2-52-203-98-126.compute-1.amazonaws.com:5432/dag5c2hpjlu3ur'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -674,3 +673,7 @@ def AIform_():
         return render_template('Oko.html', result=y_[0])
     elif request.method == 'GET':
         return render_template('AIfunc.html', form=form)
+
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
