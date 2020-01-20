@@ -132,11 +132,10 @@ Requirement2 = ormRequirement(requirement_name='use css',
                               requirement_point=1)
 Requirement3 = ormRequirement(requirement_name='use html5',
                               requirement_point=1)
-# session.add_all([Student1, Student2, Student3])
-# session.add_all([Laboratory1])
-# session.add_all([Requirement1, Requirement2, Requirement3])
-# session.commit()
-db.session.commit()
+session.add_all([Student1, Student2, Student3])
+session.add_all([Laboratory1])
+session.add_all([Requirement1, Requirement2, Requirement3])
+session.commit()
 
 # main page
 @app.route('/', methods=['GET', 'POST'])
