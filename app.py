@@ -24,14 +24,14 @@ Session = sessionmaker(bind=engine)
 Base = declarative_base()
 metadata = Base.metadata
 session = Session()
-ENV = 'dev'
+ENV = 'prod'
 if ENV == 'dev':
     app.debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = db_string
 else:
     app.debug = False
     app.config[
-        'SQLALCHEMY_DATABASE_URI'] = 'postgres://fhehffwmvlzkku:e4e9539062e2cd4765550e4ad36e835e630b2d4b442504998f870733d03df2a0@ec2-79-125-2-142.eu-west-1.compute.amazonaws.com:5432/d1jhdnlc95ioeq'
+        'SQLALCHEMY_DATABASE_URI'] = 'postgres://ysddjibomrqxyq:50528618c5ff45de5797f6383377f9c939bb22c0922bedfe3fa2f79aa73bc7b9@ec2-23-21-249-0.compute-1.amazonaws.com:5432/dfc1evd9hjiukk'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -101,10 +101,10 @@ class ormLaboratoryRequirements(db.Model):
 
 db.create_all()
 
-session.query(ormStudent).delete()
-session.query(ormLaboratory).delete()
-session.query(ormRequirement).delete()
-session.query(ormStudentRequirementsDone).delete()
+# session.query(ormStudent).delete()
+# session.query(ormLaboratory).delete()
+# session.query(ormRequirement).delete()
+# session.query(ormStudentRequirementsDone).delete()
 
 Student1 = ormStudent(student_recordbook='km-6207',
                       student_name='Michael',
@@ -139,10 +139,10 @@ Requirement2 = ormRequirement(requirement_name='use css',
                               requirement_point=1)
 Requirement3 = ormRequirement(requirement_name='use html5',
                               requirement_point=1)
-session.add_all([Student1, Student2, Student3])
-session.add_all([Laboratory1])
-session.add_all([Requirement1, Requirement2, Requirement3])
-session.commit()
+# session.add_all([Student1, Student2, Student3])
+# session.add_all([Laboratory1])
+# session.add_all([Requirement1, Requirement2, Requirement3])
+# session.commit()
 
 
 # main page
