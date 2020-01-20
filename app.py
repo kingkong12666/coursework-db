@@ -101,10 +101,10 @@ class ormLaboratoryRequirements(db.Model):
 
 db.create_all()
 
-session.query(ormStudent).delete()
-session.query(ormLaboratory).delete()
-session.query(ormRequirement).delete()
-session.query(ormStudentRequirementsDone).delete()
+# session.query(ormStudent).delete()
+# session.query(ormLaboratory).delete()
+# session.query(ormRequirement).delete()
+# session.query(ormStudentRequirementsDone).delete()
 
 Student1 = ormStudent(student_recordbook='km-6207',
                       student_name='Michael',
