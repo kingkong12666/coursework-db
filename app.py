@@ -18,11 +18,11 @@ import plotly
 
 app = Flask(__name__)
 app.secret_key = 'key'
-engine = create_engine(db_string)
-Session = sessionmaker(bind=engine)
-Base = declarative_base()
-metadata = Base.metadata
-session = Session()
+# engine = create_engine(db_string)
+# Session = sessionmaker(bind=engine)
+# Base = declarative_base()
+# metadata = Base.metadata
+# session = Session()
 
 app.debug = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://hwqhswobmmdfmk:3491294f770bccd7f0eddc73a6d5f702f0183662cd3930482d62a8096c9eb701@ec2-52-203-98-126.compute-1.amazonaws.com:5432/dag5c2hpjlu3ur'
