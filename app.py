@@ -136,7 +136,7 @@ Requirement3 = ormRequirement(requirement_name='use html5',
 # session.add_all([Laboratory1])
 # session.add_all([Requirement1, Requirement2, Requirement3])
 # session.commit()
-
+db.session.commit()
 
 # main page
 @app.route('/', methods=['GET', 'POST'])
