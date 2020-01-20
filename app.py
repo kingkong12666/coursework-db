@@ -24,14 +24,14 @@ Session = sessionmaker(bind=engine)
 Base = declarative_base()
 metadata = Base.metadata
 session = Session()
-ENV = 'dev'
+ENV = 'prod'
 if ENV == 'dev':
     app.debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = db_string
 else:
     app.debug = False
     app.config[
-        'SQLALCHEMY_DATABASE_URI'] = 'postgres://fhehffwmvlzkku:e4e9539062e2cd4765550e4ad36e835e630b2d4b442504998f870733d03df2a0@ec2-79-125-2-142.eu-west-1.compute.amazonaws.com:5432/d1jhdnlc95ioeq'
+        'SQLALCHEMY_DATABASE_URI'] = 'postgres://hwqhswobmmdfmk:3491294f770bccd7f0eddc73a6d5f702f0183662cd3930482d62a8096c9eb701@ec2-52-203-98-126.compute-1.amazonaws.com:5432/dag5c2hpjlu3ur'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
