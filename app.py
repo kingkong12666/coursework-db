@@ -93,6 +93,7 @@ class ormLaboratoryRequirements(db.Model):
         self.requirement_point = requirement_point
 
 
+db.drop_all()
 db.create_all()
 
 # session.query(ormStudent).delete()
